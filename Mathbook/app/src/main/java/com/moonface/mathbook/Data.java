@@ -11,15 +11,7 @@ class Data {
                                         "\n \u2022 סוגריים" +
                                         "\n \u2022 כפל וחילוק" +
                                         "\n \u2022 חיבור וחיסור" +
-                                        "\n אם יש כמה פעולות מאותה רמה, מבצעים אותן משמאל לימין, לפי הסדר."),
-                                new Text("לדוגמא:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$2\\times(5+7)-6\\div3 =$$" +
-                                        "\n$$2\\times12-6\\div3 =$$" +
-                                        "\n$$24-2 =$$" +
-                                        "\n$$22$$"),
-                                new Text("פירמידת פעולות החשבון:").setTextStyle(Text.TextStyle.underline),
-                                new Space(100),
-                                new Image(R.drawable.ic_pyramid_of_operations, 400, 400),
+                                        "\n אם יש כמה פעולות מאותה רמה, מבצעים אותן משמאל לימין, לפי הסדר.")
                         }),
                         new Topic("מספרים מכוונים", R.drawable.ic_negative_numbers, new Item[]{
                                 new Text(" עד כה אנחנו מכירים את המספרים הטבעיים (המספרים השלמים שגדולים או שווים ל0). כעת נוסיף להם את המספרים השליליים ונגדיר קבוצה חדשה של מספרים - המספרים השלמים." +
