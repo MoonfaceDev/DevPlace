@@ -15,97 +15,66 @@ class Data {
                                         "\n אם יש כמה פעולות מאותה רמה, מבצעים אותן משמאל לימין.")
                         }),
                         new Topic("מספרים מכוונים", R.drawable.ic_negative_numbers, new Item[]{
-                                new Text(" עד כה אנחנו מכירים את המספרים הטבעיים (המספרים השלמים שגדולים או שווים ל0). כעת נוסיף להם את המספרים השליליים ונגדיר קבוצה חדשה של מספרים - המספרים השלמים." +
-                                        "\nדוגמאות למספרים שליליים:"),
-                                new Text("-4, -36, -1584, -1").setAlignment(Text.Alignment.center).setDirection(Text.Direction.ltr),
+                                new Text(" עד כה אנחנו מכירים את המספרים הטבעיים (המספרים השלמים שגדולים או שווים ל0). כעת נוסיף להם את המספרים השליליים ונגדיר קבוצה חדשה של מספרים - המספרים השלמים."),
                                 new Text("ערך מוחלט").setTextStyle(Text.TextStyle.bold),
-                                new Text("ערך מוחלט של מספר הוא גודל המספר ללא הסימן. מסמנים ערך מוחלט על ידי שני קווים אנכיים מצידיו של המספר: |3-|. דוגמאות:"),
-                                new Formula("$$|-3| = 3$$"),
-                                new Formula("$$|6| = 6$$"),
-                                new Formula("$$|0| = 0$$"),
-                                new Formula("$$|-42| = 42$$"),
+                                new Text("ערך מוחלט של מספר הוא גודל המספר ללא הסימן. מסמנים ערך מוחלט על ידי שני קווים אנכיים מצידיו של המספר."),
+                                new Formula("$$|n|=n\\qquad(n>0)$$" +
+                                        "\n$$|n|=-n\\qquad(n<0)$$"),
                                 new Text("פעולות במספרים מכוונים").setTextStyle(Text.TextStyle.bold),
                                 new Text("חיבור:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם שני המספרים שליליים, התוצאה תהיה חיבור הערכים המוחלטים של המספרים והסימן יהיה -." +
-                                        "\nאם אחד מהמספרים חיובי והשני שלילי, התוצאה תהיה חיסור הערכים המוחלטים של המספרים והסימן יהיה כסימן המספר הראשון."),
+                                new Formula("$$(a<0,\\space b<0)$$" +
+                                        "\n$$a+b=-(|a|+|b|)$$"),
+                                new Formula("$$(a<0,\\space b>0)$$" +
+                                        "\n$$a+b=-(|a|-|b|)$$"),
+                                new Formula("$$(a>0,\\space b<0)$$" +
+                                        "\n$$a+b=|a|-|b|$$"),
                                 new Text("חיסור:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם שני המספרים שליליים, התוצאה תהיה חיבור של המספר הראשון וערכו המוחלט של המספר השני." +
-                                        "\nאם אחד מהמספרים חיובי והשני שלילי, התוצאה תהיה חיבור של המספרים והסימן יהיה הסימן של המספר הראשון"),
-                                new Text("כפל וחילוק:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם שני המספרים שליליים, התוצאה תהיה מכפלת/מנת המספרים והסימן יהיה +" +
-                                        "\nאם אחד מהמספרים חיובי והשני שלילי, התוצאה תהיה מכפלת/מנת המספרים והסימן יהיה -"),
-                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$-5+(-6) = -11$$"),
-                                new Formula("$$7+(-3) = 4$$"),
-                                new Formula("$$-7+3 = -4$$"),
-                                new Formula("$$-4-(-9) = 5$$"),
-                                new Formula("$$1-(-2) = 3$$"),
-                                new Formula("$$-1-2 = -3$$"),
-                                new Formula("$$-6\\times(-3) = 18$$"),
-                                new Formula("$$-6\\div(-3) = 2$$"),
-                                new Formula("$$-4\\times2 = -8$$"),
-                                new Formula("$$-4\\times2 = -2$$")
+                                new Formula("$$(a<0,\\space b<0)$$" +
+                                        "\n$$a-b=a+|b|$$"),
+                                new Formula("$$(a<0,\\space b>0)$$" +
+                                        "\n$$a-b=-(|a|+b)$$"),
+                                new Formula("$$(a>0,\\space b<0)$$" +
+                                        "\n$$a-b=a+|b|$$"),
+                                new Text("כפל:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$(a<0,\\space b<0)$$" +
+                                        "\n$$a \\times b=|a| \\times |b|$$"),
+                                new Formula("$$(a<0,\\space b>0)$$" +
+                                        "\n$$a \\times b=-(|a| \\times b)$$"),
+                                new Formula("$$(a>0,\\space b<0)$$" +
+                                        "\n$$a \\times b=-(a \\times |b|)$$"),
+                                new Text("חילוק:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$(a<0,\\space b<0)$$" +
+                                        "\n$$a \\div b=|a| \\div |b|$$"),
+                                new Formula("$$(a<0,\\space b>0)$$" +
+                                        "\n$$a \\div b=-(|a| \\div b)$$"),
+                                new Formula("$$(a>0,\\space b<0)$$" +
+                                        "\n$$a \\div b=-(a \\div |b|)$$"),
                         }),
                         new Topic("שברים", R.drawable.ic_fraction, new Item[]{
                                 new Text("שבר הוא דרך לייצוג של מנה. לשבר יש שני חלקים: מונה (המחולק, למעלה) ומכנה (המחלק, למטה). בין המונה והמכנה נמצא קו השבר."),
-                                new Text("דוגמאות לשברים:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$\\frac{1}{2} \\space \\space" + "\\frac{5}{6} \\space \\space" + "\\frac{17}{5}$$"),
                                 new Text("פעולות בשברים").setTextStyle(Text.TextStyle.bold),
                                 new Text("חיבור וחיסור שברים:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם לשני שברים יש אותו מכנה, מחברים / מחסרים את המונים ומשאירים את המכנה:"),
                                 new Formula("$$\\frac{a}{c}\\pm\\frac{b}{c}=\\frac{a\\pm b}{c}$$"),
-                                new Text("אם לשני שברים יש אותו מכנה, מוצאים את המכנה המשותף הפשוט ביותר ואז מחברים את המונים ומשאירים את המכנה:"),
                                 new Formula("$$\\frac{a}{b}\\pm\\frac{c}{d}=\\frac{a\\times d}{b\\times d}\\pm\\frac{c\\times b}{b\\times d}=\\frac{a\\times d\\pm c\\times b}{b\\times d}$$"),
-                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$\\frac{3}{4}-\\frac{2}{4}=\\frac{1}{4}$$"),
-                                new Formula("$$\\frac{1}{2}+\\frac{1}{3}=\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}$$"),
                                 new Text("כפל שברים:").setTextStyle(Text.TextStyle.underline),
-                                new Text("כשכופלים שברים מכפילים את המונים ומכפילים את המכנים:"),
                                 new Formula("$$\\frac{a}{b}\\times\\frac{c}{d}=\\frac{a \\times c}{b \\times d}$$"),
-                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$\\frac{4}{5}\\times{4}{3}=\\frac{16}{15}$$"),
                                 new Text("חילוק שברים:").setTextStyle(Text.TextStyle.underline),
-                                new Text("בשביל לחלק שברים, מבצעים כפל בהופכי, כלומר, מכפילים את השבר הראשון בשבר השני בהופכי:"),
                                 new Formula("$$\\frac{a}{b}\\div\\frac{c}{d}=\\frac{a}{b}\\times\\frac{d}{c}=\\frac{a\\times d}{b \\times c}$$"),
-                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$\\frac{5}{7}\\div\\frac{1}{2}=\\frac{5}{7}\\times\\frac{2}{1}=\\frac{10}{7}$$"),
                                 new Text("צמצום:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם המונה והמכנה הם מכפלה (אושניתן להביא אותם לכפלה), ומופיע בהם גורם משותף, ניתן לחלק בו:"),
+                                new Text("אם המונה והמכנה הם מכפלה (או שניתן להביא אותם למכפלה), ומופיע בהם גורם משותף, ניתן לחלק בו:"),
                                 new Formula("$$\\frac{a\\times b}{b\\times c}=\\frac{a}{c}$$"),
-                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$\\frac{6}{3}=\\frac{3\\times 2}{3}=\\frac{2}{1}=2$$")
-                        }),
-                        new Topic("משתנים", R.drawable.ic_variables, new Item[]{
-                                new Text("משתנה הוא דרך לייצג מספר לא קבוע, שהביטוי / משוואה יתקיים לכל ערך שלו. משתנים מייצגים על ידי אותיות קטנות באנגלית, לרוב משתמשים באותיות:"),
-                                new Formula("$$x,y,z$$"),
-                                new Text("הערה:").setTextStyle(Text.TextStyle.underline),
-                                new Text("כשכופלים מספר במשתנה או משתנה במשתנה, לא משתמשים בסימן הכפל"),
-                                new Formula("$$2\\times x = 2x$$"),
-                                new Formula("$$x\\times y = xy$$")
-                        }),
-                        new Topic("כינוס איברים דומים", R.drawable.ic_simplifying, new Item[]{
-                                new Text("איבר: מכפלה או מנה של מספרים ומשתנים. בין איברים יש חיבור וחיסור"),
-                                new Text("אם יש בביטוי כמה איברים שהם מכפלות של מספר במשתנה, ניתן לחבר אותם, כמו בדוגמא הבאה:"),
-                                new Formula("$$2x+5x = 7x$$"),
-                                new Text("ניתן לעשות זאת מספר פעמים:"),
-                                new Formula("$$4x+8y+7+12y+2x+8=6x+20y+15$$")
                         }),
                         new Topic("פתיחת סוגריים", R.drawable.ic_parenthesis_opening, new Item[]{
                                 new Text("ראינו כבר שעל פי סדר פעולות חשבון, מחשבים בראש ובראשונה ביטוי הכתוב בתוך סוגריים. אך לפעמים, אם הביטוי כולל נעלם, אנחנו לא יכולים לחשב אותו בלי להיפטר מהסוגריים. ישנם כמה מקרים בהם נרצה להיפטר מהסוגריים, ההבדל ביניהם הוא מה בא לפני הסוגריים:"),
                                 new Text("חיבור:").setTextStyle(Text.TextStyle.underline),
-                                new Text("בחיבור ניתן פשוט להתעלם מהסוגריים."),
-                                new Formula("$$...+(a+b)=...+a+b$$"),
+                                new Formula("$$...+(a+b+c)=...+a+b+c$$"),
                                 new Text("חיסור:").setTextStyle(Text.TextStyle.underline),
-                                new Text("בחיסור כדי להיפטר מהסגוריים יש להפוך את הסימן של כל איבר בתוכם."),
-                                new Formula("$$...-(a+b-c)=...-a-b+c$$"),
+                                new Formula("$$...-(a+b+c)=...-a-b-c$$"),
                                 new Text("מכפלה בגורם:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם כופלים סוגריים בגורם צריך להכפיל כל איבר בתוך הסוגריים בגורם שכופל את הסוגריים כדי להיפטר מהם."),
-                                new Formula("$$...a(b-c)=ab-ac$$"),
+                                new Formula("$$...n(a+b+c)=na+nb+nc$$"),
                                 new Text("חלוקה בגורם:").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם מחלקים סוגריים בגורם צריך לחלק כל איבר בתוך הסוגריים בגורם שבמכנה כדי להיפטר מהם."),
-                                new Formula("$$\\frac{ax+ay}{a}=x+y$$"),
+                                new Formula("$$\\frac{na+nb}{n}=a+b$$"),
                                 new Text("מכפלת סוגריים").setTextStyle(Text.TextStyle.underline),
-                                new Text("אם יש מכפלת סוגריים, כדי להיפטר מהסוגריים צריך לכפול כל אחד מהאיברים בסוגריים הראשונים בכל אחד מהאיברים בסוגריים השניים."),
                                 new Formula("$$(a+b)(c+d)=ac+ad+bc+bd$$")
                         }),
                         new Topic("משוואות עם נעלם אחד", R.drawable.ic_equation, new Item[]{
@@ -138,7 +107,24 @@ class Data {
                                 new Formula("$$\\frac{a-b}{b}=\\frac{c-d}{d}$$")
                         }),
                         new Topic("מערכת משוואות עם שני נעלמים", R.drawable.ic_equation_system, new Item[]{
-
+                                new Text("מערכת משוואות עם שני נעלמים כוללת שתי משוואות שמקשרות בין שני נעלמים (לרוב x,y), כך שניתן למצוא נקודה (ערכי x וy) או קבוצת נקודות שעבורן המשוואות מתקיימות. ניתן לפתור מערכת משוואות על ידי בידוד אחד מהנעלמים באחת המשוואות והצבתו במשוואה השנייה. במצב כזה תתקבל משוואה עם נעלם אחד, שניתן לפתור ולחלץ ממנה את ערך הנעלם. את הערך שהתקבל ניתן להציב במשוואה השנייה ולחלץ את ערכו של הנעלם השני."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$\\begin{cases}" +
+                                        "x+y=4\\\\" +
+                                        "x-y=10" +
+                                        "\\end{cases}$$\n" +
+                                        "$$\\begin{cases}" +
+                                        "y=4-x\\\\" +
+                                        "x-y=10" +
+                                        "\\end{cases}$$\n" +
+                                        "$$x-(4-x)=10$$" +
+                                        "\n$$x-4+x=10$$" +
+                                        "\n$$2x=14$$" +
+                                        "\n$$x=7$$" +
+                                        "\n$$y=4-7$$" +
+                                        "\n$$y=-3$$" +
+                                        "\n$$(7,-3)$$"
+                                        )
                         }),
                         new Topic("חוקי חזקות", R.drawable.ic_power_rules, new Item[]{
 
