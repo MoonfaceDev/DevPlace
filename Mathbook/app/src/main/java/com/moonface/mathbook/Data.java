@@ -127,19 +127,87 @@ class Data {
                                         )
                         }),
                         new Topic("חוקי חזקות", R.drawable.ic_power_rules, new Item[]{
-
+                                new Text("אם n,m טבעיים, מתקיים:"),
+                                new Formula("$$a^n \\times a^m=a^{n+m}$$"),
+                                new Formula("$$\\frac{a^n}{a^m}=a^{n-m}$$"),
+                                new Formula("$$(a^n)^m=a^{n \\times m}$$"),
+                                new Formula("$$(a \\times b)^n=a^n \\times b^n$$"),
+                                new Formula("$$(\\frac{a}{b})^n=\\frac{a^n}{b^n}$$"),
+                                new Formula("$$a^{-n}=\\frac{1}{a^n}$$"),
+                                new Formula("$$a^{\\frac{n}{m}}=\\sqrt[m]{a^n}$$"),
+                                new Text("הערה:").setTextStyle(Text.TextStyle.underline),
+                                new Text("מכיוון שראינו שגם שורשים הם חזקות, כל חוקי החזקות נכונים גם לגבי שורשים.")
                         }),
-                        new Topic("הוצאת גורף משותף", R.drawable.ic_shared_factor, new Item[]{
-
+                        new Topic("הוצאת גורם משותף", R.drawable.ic_shared_factor, new Item[]{
+                                new Text("אם נרצה להפוך ביטוי של חיבור וחיסור למכפלה, הוצאת גורם משותף יכולה לעזור בכך. ניתן להתייחס אל פעולה זו כפעולה הפוכה לפתיחת סוגריים."),
+                                new Formula("$$ab+ac=a(b+c)$$"),
+                                new Text("פירוק לפי קבוצות").setTextStyle(Text.TextStyle.underline),
+                                new Text("אם אין גורם משותף לכל האיברים אך לקבוצות שלהם, עדיין ניתן להפוך אותם למכפלה."),
+                                new Formula("$$ax+ay+bx+by=$$" +
+                                        "\n$$a(x+y)+b(x+y)=$$" +
+                                        "\n$$(a+b)(x+y)$$")
                         }),
                         new Topic("נוסחאות כפל מקוצר", R.drawable.ic_short_product_formulas, new Item[]{
-
+                                new Text("על ידי פתיחת סוגריים, ניתן להגיע ל4 הנוסחאות הבאות:"),
+                                new Formula("$$a^2-b^2=(a-b)(a+b)$$"),
+                                new Formula("$$a^3 \\pm b^3=(a \\pm b)(a^2 \\mp ab+b^2)$$"),
+                                new Formula("$$(a \\pm b)^2=a^2 \\pm 2ab + b^2$$"),
+                                new Formula("$$(a \\pm b)^3=a^3 \\pm 3a^2b+3ab^2 \\pm b^3$$")
                         }),
                         new Topic("טרינום", R.drawable.ic_trinom, new Item[]{
-
+                                new Text("טרינום הוא פולינום מהצורה:"),
+                                new Formula("$$ax^2+bx+c$$"),
+                                new Text("כדי להפוך את פולינום זה למכפלה, נבצע את השלבים הבאים:" +
+                                        "\n \u2022 נרשום את כל המספרים השלמים שמכפלתם שווה לac." +
+                                        "\n \u2022 מתוך הרשימה נבחר את שני המספרים n וm שסכומם שווה לb." +
+                                        "\n \u2022 עכשיו, נוכל לכתוב את הטרינום כך:"),
+                                new Formula("$$ax^2+nx+mx+c$$"),
+                                new Text("\n \u2022 במצב אליו הגענו יהיה ניתן לבצע פירוק לפי קבוצות ולהגיע למכפלה ששווה לביטוי ההתחלתי."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$2x^2+13x+15$$" +
+                                        "\n$$a=2,\\space b=13,\\space c=15$$"+
+                                        "\n$$30$$" +
+                                        "\n$$\\begin{array}{cc}" +
+                                        "1 & 30 \\\\" +
+                                        "2 & 15 \\\\" +
+                                        "\\bold{3} & \\bold{10} \\\\" +
+                                        "5 & 6" +
+                                        "\\end{array}$$"+
+                                        "\n$$2x^2+10x+3x+15=$$" +
+                                        "\n$$2x(x+5)+3(x+5)=$$" +
+                                        "\n$$(2x+3)(x+5)$$"),
+                                new Text("הערה:").setTextStyle(Text.TextStyle.underline),
+                                new Text("אם a=1, והמספרים שהתקבלו בטרינום הם n וm. הפירוק יהיה:"),
+                                new Formula("$$(x+n)(x+m)$$")
                         }),
                         new Topic("משוואה ריבועית", R.drawable.ic_quadratic_equation, new Item[]{
-
+                                new Text("משוואה ריבועית היא משוואה מהצורה:"),
+                                new Formula("$$ax^2+bx+c=0,\\space a \\neq 0$$"),
+                                new Text("לרוב נפתור משוואה ריבועית על ידי שימוש בנוסחת השורשים:"),
+                                new Formula("$$x=\\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$"),
+                                new Text("ניתן גם לפתור משוואה ריבועית על ידי פירוק (לפי נוסחת הכפל המקוצר של דו איבר בריבוע או טרינום), כך שמתקבלת מכפלת סוגריים וניתן לדעת מתי המשוואה מתאפסת."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x^2+6x-16=0$$" +
+                                        "\n$$a=1,\\space b=6,\\space c=-16$$"),
+                                new Text("על ידי נוסחת השורשים:"),
+                                new Formula("$$x=\\frac{-6\\pm \\sqrt{6^2-4\\times 1 \\times (-16)}}{2\\times 1}$$" +
+                                        "\n$$x=\\frac{-6\\pm \\sqrt{36+64}}{2}$$" +
+                                        "\n$$x=\\frac{-6\\pm \\sqrt{100}}{2}$$" +
+                                        "\n$$x=\\frac{-6\\pm 10}{2}$$" +
+                                        "\n$$x_1=\\frac{-6+10}{2}=\\frac{4}{2}=2$$" +
+                                        "\n$$x_2=\\frac{-6-10}{2}=\\frac{-16}{2}=-8$$"),
+                                new Text("על ידי טרינום:"),
+                                new Formula("$$-16$$" +
+                                        "\n$$\\begin{array}{cc}" +
+                                        "-1 & 16 \\\\" +
+                                        "\\bold{-2} & \\bold{8} \\\\" +
+                                        "-4 & 4" +
+                                        "\\end{array}$$" +
+                                        "\n$$x^2-2x+8x-16=0$$" +
+                                        "\n$$x(x-2)+8(x-2)=0$$" +
+                                        "\n$$(x+8)(x-2)=0$$" +
+                                        "\n$$x_1=-8$$" +
+                                        "\n$$x_2=2$$")
                         }),
                         new Topic("משוואה עם פרמטרים", R.drawable.ic_parametric_equation, new Item[]{
 
