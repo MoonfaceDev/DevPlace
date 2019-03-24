@@ -105,7 +105,7 @@ public class TopicActivity extends AppCompatActivity {
                     Formula formula = (Formula)i;
                     MathView mathView = new MathView(this, null);
                     mathView.setText(formula.text);
-                    mathView.setEngine(MathView.Engine.MATHJAX);
+                    mathView.setEngine(MathView.Engine.KATEX);
                     mathView.setLayoutParams(new LinearLayout.LayoutParams(formula.sizeX, formula.sizeY));
                     parent.addView(mathView);
             }
