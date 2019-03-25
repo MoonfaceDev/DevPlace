@@ -223,6 +223,22 @@ class Data {
                                 new Formula("$$10-6x>-2$$" +
                                         "\n$$-6x>-12$$" +
                                         "\n$$x<2$$"),
+                                new Text("מערכת וגם").setTextStyle(Text.TextStyle.bold),
+                                new Text("מערכת וגם היא מערכת עם שני אי שוויונים. התשובה היא התחום בו שניהם מתקיימים. כדי לפתור מערכת וגם, קודם פותרים את שני אי השוויונים, ואז משרטטים אותם על ציר המספרים ומוצאים תחום חיתוך."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x+4<6  \\quad \\text{and} \\quad x-3>-5$$" +
+                                        "\n$$x<2 \\quad \\text{and} \\quad x>-2$$"),
+                                new Image(R.drawable.inequalities_img3, Item.MATCH_PARENT, 300),
+                                new Text("תשובה:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$-2 < x < 2$$"),
+                                new Text("מערכת או").setTextStyle(Text.TextStyle.bold),
+                                new Text("מערכת או היא מערכת עם שני אי שוויונים. התשובה היא התחום בו לפחות אחד מהם מתקיים. כדי לפתור מערכת או, קודם פותרים את שני אי השוויונים, ואז משרטטים אותם על ציר המספרים ומוצאים תחום איחוד."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x+4<6 \\quad \\text{or} \\quad x-3>-5$$" +
+                                        "\n$$x<2 \\quad \\text{or} \\quad x>-2$$"),
+                                new Image(R.drawable.inequalities_img4, Item.MATCH_PARENT, 300),
+                                new Text("תשובה:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x \\in \\mathbb{R}$$"),
                                 new Text("אי שוויון ממעלה שנייה").setTextStyle(Text.TextStyle.bold),
                                 new Text("אי שוויון ממעלה שנייה נפתור בשלבים הבאים:"+
                                         "\n\u2022 מעבירים הכל לאגף אחד כך שבאגף השני נשאר אפס." +
@@ -266,6 +282,21 @@ class Data {
                                         "\n\u2022 מסמנים את הערכים שהתקבלו על ציר המספרים." +
                                         "\n\u2022 בוחרים מספר בכל אחד מהתחומים (בין נקודות בהן הביטוי מתאפס ובקצוות) ומציבים באי שוויון המפושט (אחרי השלב הראשון). אם התוצאה חיובית, מסמנים + מעל התחום. אם התוצאה שלילית, מסמנים - מתחת לתחום." +
                                         "\n\u2022 עונים על השאלה בהתאם לסימן שבתרגיל. אם הביטוי גדול מ0, רושמים את התחומים שמעליהם מופיע +. אם הביטוי קטן מ0, רושמים את התחומים שמתחתיהם רשום -."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$\\frac{3}{x-2}>\\frac{4}{x}$$" +
+                                        "\n$$\\frac{3}{x-2}-\\frac{4}{x}>0$$" +
+                                        "\n$$\\frac{3x}{x(x-2)}-\\frac{4(x-2)}{x(x-2)}>0$$" +
+                                        "\n$$\\frac{3x-4(x-2)}{x(x-2)}>0$$" +
+                                        "\n$$\\frac{3x-4x+8}{x(x-2)}>0$$" +
+                                        "\n$$\\frac{8-x}{x(x-2)}>0$$"),
+                                new Divider(),
+                                new Text("מונה מתאפס:").setAlignment(Text.Alignment.center),
+                                new Formula("$$x=8$$"),
+                                new Text("מכנה מתאפס:").setAlignment(Text.Alignment.center),
+                                new Formula("$$x=0,\\space x=2$$"),
+                                new Image(R.drawable.inequalities_img5, Item.MATCH_PARENT, 400),
+                                new Text("תשובה:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x < 0 \\quad \\text{or} \\quad 2 < x < 8$$"),
                                 new Text("הערות:").setTextStyle(Text.TextStyle.bold),
                                 new Text("* כשפותרים אי שוויון ממעלה שלישית או יותר או אי שוויון עם נעלם במכנה, ניתן לבדוק מה הסימן רק באחד התחומים כי הסימן יתחלף בכל תחום, למעט מקרים בהם יש פתרון שחוזר על עצמו (דו איבר בריבוע או פתרון משותף במונה ובמכנה). במקרים אלו משני צידי הנקודה יהיה אותו הסימן." +
                                         "\n* אם באי השוויון הסימן הוא גדול שווה או קטן שווה, התשובה תכלול גם את הנקודות שבקצה התחום אם הן נמצאות בתחום ההגדרה.")
