@@ -12,7 +12,12 @@ class Data {
                                         "\n \u2022 חזקות ושורשים" +
                                         "\n \u2022 כפל וחילוק" +
                                         "\n \u2022 חיבור וחיסור" +
-                                        "\n אם יש כמה פעולות מאותה רמה, מבצעים אותן משמאל לימין.")
+                                        "\n אם יש כמה פעולות מאותה רמה, מבצעים אותן משמאל לימין."),
+                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$2\\times(5+7)-6\\div3 =$$" +
+                                        "\n$$2\\times12-6\\div3 =$$" +
+                                        "\n$$24-2 =$$" +
+                                        "\n$$22$$")
                         }),
                         new Topic("מספרים מכוונים", R.drawable.ic_negative_numbers, new Item[]{
                                 new Text(" עד כה אנחנו מכירים את המספרים הטבעיים (המספרים השלמים שגדולים או שווים ל0). כעת נוסיף להם את המספרים השליליים ונגדיר קבוצה חדשה של מספרים - המספרים השלמים."),
@@ -49,20 +54,36 @@ class Data {
                                         "\n$$a \\div b=-(|a| \\div b)$$"),
                                 new Formula("$$(a>0,\\space b<0)$$" +
                                         "\n$$a \\div b=-(a \\div |b|)$$"),
+                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$-5+(-6) = -11$$"),
+                                new Formula("$$7+(-3) = 4$$"),
+                                new Formula("$$-7+3 = -4$$"),
+                                new Formula("$$-4-(-9) = 5$$"),
+                                new Formula("$$1-(-2) = 3$$"),
+                                new Formula("$$-1-2 = -3$$"),
+                                new Formula("$$-6\\times(-3) = 18$$"),
+                                new Formula("$$-6\\div(-3) = 2$$"),
+                                new Formula("$$-4\\times 2 = -8$$"),
+                                new Formula("$$-4\\div 2 = -2$$")
                         }),
                         new Topic("שברים", R.drawable.ic_fraction, new Item[]{
                                 new Text("שבר הוא דרך לייצוג של מנה. לשבר יש שני חלקים: מונה (המחולק, למעלה) ומכנה (המחלק, למטה). בין המונה והמכנה נמצא קו השבר."),
-                                new Text("פעולות בשברים").setTextStyle(Text.TextStyle.bold),
-                                new Text("חיבור וחיסור שברים:").setTextStyle(Text.TextStyle.underline),
+                                new Text("חיבור וחיסור שברים:").setTextStyle(Text.TextStyle.bold),
                                 new Formula("$$\\frac{a}{c}\\pm\\frac{b}{c}=\\frac{a\\pm b}{c}$$"),
                                 new Formula("$$\\frac{a}{b}\\pm\\frac{c}{d}=\\frac{a\\times d}{b\\times d}\\pm\\frac{c\\times b}{b\\times d}=\\frac{a\\times d\\pm c\\times b}{b\\times d}$$"),
-                                new Text("כפל שברים:").setTextStyle(Text.TextStyle.underline),
+                                new Text("כפל שברים:").setTextStyle(Text.TextStyle.bold),
                                 new Formula("$$\\frac{a}{b}\\times\\frac{c}{d}=\\frac{a \\times c}{b \\times d}$$"),
-                                new Text("חילוק שברים:").setTextStyle(Text.TextStyle.underline),
+                                new Text("חילוק שברים:").setTextStyle(Text.TextStyle.bold),
                                 new Formula("$$\\frac{a}{b}\\div\\frac{c}{d}=\\frac{a}{b}\\times\\frac{d}{c}=\\frac{a\\times d}{b \\times c}$$"),
-                                new Text("צמצום:").setTextStyle(Text.TextStyle.underline),
+                                new Text("צמצום:").setTextStyle(Text.TextStyle.bold),
                                 new Text("אם המונה והמכנה הם מכפלה (או שניתן להביא אותם למכפלה), ומופיע בהם גורם משותף, ניתן לחלק בו:"),
                                 new Formula("$$\\frac{a\\times b}{b\\times c}=\\frac{a}{c}$$"),
+                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$\\frac{3}{4}-\\frac{2}{4}=\\frac{1}{4}$$"),
+                                new Formula("$$\\frac{1}{2}+\\frac{1}{3}=\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}$$"),
+                                new Formula("$$\\frac{2}{3}\\times \\frac{5}{2}=\\frac{10}{6}=\\frac{5}{3}=1\\frac{2}{3}$$"),
+                                new Formula("$$\\frac{5}{7}\\div\\frac{1}{2}=\\frac{5}{7}\\times\\frac{2}{1}=\\frac{10}{7}=1\\frac{3}{7}$$"),
+                                new Formula("$$\\frac{6}{3}=\\frac{2}{1}=2$$")
                         }),
                         new Topic("פתיחת סוגריים", R.drawable.ic_parenthesis_opening, new Item[]{
                                 new Text("ראינו כבר שעל פי סדר פעולות חשבון, מחשבים בראש ובראשונה ביטוי הכתוב בתוך סוגריים. אך לפעמים, אם הביטוי כולל נעלם, אנחנו לא יכולים לחשב אותו בלי להיפטר מהסוגריים. ישנם כמה מקרים בהם נרצה להיפטר מהסוגריים, ההבדל ביניהם הוא מה בא לפני הסוגריים:"),
@@ -75,20 +96,31 @@ class Data {
                                 new Text("חלוקה בגורם:").setTextStyle(Text.TextStyle.underline),
                                 new Formula("$$\\frac{na+nb}{n}=a+b$$"),
                                 new Text("מכפלת סוגריים").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$(a+b)(c+d)=ac+ad+bc+bd$$")
+                                new Formula("$$(a+b)(c+d)=ac+ad+bc+bd$$"),
+                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
+                                new Formula("$$x+(2x-5)=3x-5$$"),
+                                new Formula("$$3-(4x-9)+2x=$$" +
+                                        "\n$$3-4x+9+2x=$$" +
+                                        "$$12-2x$$"),
+                                new Formula("$$6(x-2)+8=6x-12+8=6x-4$$"),
+                                new Formula("$$\\frac{8x-4}{4}=2x-1$$"),
+                                new Formula("$$(x+4)(3x-7)=$$" +
+                                        "\n$$3x^2-7x+12x-28=$$" +
+                                        "\n$$3x^2+5x-28$$")
                         }),
                         new Topic("משוואות עם נעלם אחד", R.drawable.ic_equation, new Item[]{
                                 new Text("לכל משוואה יש שני אגפים - אגף ימין ואגף שמאל כאשר ביניהם יש שוויון (=). המטרה שלנו תהיה למצוא את ערכו של המשתנה, הנעלם (לרוב נקרא x). ניתן לבצע פעולות חשבון על האגפים כל עוד הן מתבצעות על שני האגפים, והשוויון נשמר. נשתמש בפעולות אלו כדי לפתור משוואות."),
                                 new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
-                                new Formula("$$3x=6$$"),
-                                new Text("נחלק את המשוואה ב3."),
-                                new Formula("$$x=2$$"),
-                                new Text("בכל משוואה אנחנו נרצה לבודד את x - לראות את x באגף אחד ומספר באגף השני."),
+                                new Formula("$$3x=6$$"+
+                                        "\n$$x=2$$"),
+                                new Divider(),
                                 new Formula("$$x-8=2$$" +
                                         "\n$$x=10$$"),
+                                new Divider(),
                                 new Formula("$$5x+12=7$$" +
                                         "\n$$5x=-5$$" +
                                         "\n$$x=-1$$"),
+                                new Divider(),
                                 new Formula("$$\\frac{x+4}{2}+3x=6-2x$$" +
                                         "\n$$2(\\frac{x+4}{2}+3x)=2(6-2x)$$" +
                                         "\n$$x+4+6x=12-4x$$" +
@@ -209,12 +241,22 @@ class Data {
                         }),
                         new Topic("משוואה עם פרמטרים", R.drawable.ic_parametric_equation, new Item[]{
                                 new Text("משוואה עם פרמטרים היא משוואה בה בנוסף למשתנה (הנעלם שאנו רוצים למצוא), נמצא פרמטר. פתרון של משוואה עם פרמטר הוא לא בהכרח מספר, אלא ביטוי המכיל את הפרמטר. כדי לפתור משוואה כזו, יש לבודד את המשתנה (לרוב x)."),
-                                new Text("דוגמא:").setTextStyle(Text.TextStyle.underline),
+                                new Text("דוגמאות:").setTextStyle(Text.TextStyle.underline),
                                 new Formula("$$2ax-16a=4x$$" +
                                         "\n$$2ax-4x=16a$$" +
                                         "\n$$x(2a-4)=16a$$" +
                                         "\n$$x=\\frac{16a}{2a-4}$$" +
-                                        "\n$$x=\\frac{8a}{a-2},\\space a \\neq 2$$")
+                                        "\n$$x=\\frac{8a}{a-2},\\space a \\neq 2$$"),
+                                new Divider(),
+                                new Formula("$$6x^2-12ax+3x-6a=0$$" +
+                                        "\n$$6x^2+(3-12a)x-6a=0$$" +
+                                        "\n$$x=\\frac{-(3-12a)\\pm \\sqrt{(3-12a)^2+144a}}{12}$$" +
+                                        "\n$$x=\\frac{12a-3\\pm \\sqrt{9-72a+144a^2+144a}}{12}$$" +
+                                        "\n$$x=\\frac{12a-3\\pm \\sqrt{144a^2+72a+9}}{12}$$" +
+                                        "\n$$x=\\frac{12a-3\\pm \\sqrt{(12a+3)^2}}{12}$$" +
+                                        "\n$$x=\\frac{12a-3\\pm (12a+3)}{12}$$" +
+                                        "\n$$x_1=\\frac{12a-3+12a+3}{12}=\\frac{24a}{12}=2a$$" +
+                                        "\n$$x_2=\\frac{12a-3-12a-3}{12}=-\\frac{6}{12}=-\\frac{1}{2}$$")
                         }),
                         new Topic("אי שוויונים", R.drawable.ic_inequation, new Item[]{
                                 new Text("אי שוויון ממעלה ראשונה").setTextStyle(Text.TextStyle.bold),
@@ -303,7 +345,22 @@ class Data {
                         })
                 }),
                 new Section("גיאומטריה במישור", "משולשים, מרובעים, מעגלים, היקפים ושטחים, יחסים ופרופורציות...", R.drawable.ic_geometry, new Topic[]{
-
+                        new Topic("חפיפת משולשים",,),
+                        new Topic("משולש שווה שוקיים",,),
+                        new Topic("משולש שווה צלעות",,),
+                        new Topic("משולש ישר זווית",,),
+                        new Topic("סכום זוויות במצולע",,),
+                        new Topic("קטע אמצעים במשולש",,),
+                        new Topic("מפגש תיכונים במשולש",,),
+                        new Topic("תאלס",,),
+                        new Topic("דמיון משולשים",,),
+                        new Topic("משפט חוצה זווית",,),
+                        new Topic("מרובעים מיוחדים",,),
+                        new Topic("המעגל",,),
+                        new Topic("זוויות במעגל",,),
+                        new Topic("משיק למעגל",,),
+                        new Topic("מעגל חוסם וחסום",,),
+                        new Topic("פרופורציות במעגל",,)
                 }),
                 new Section("פונקציות", "פונקציה קווית, שיפוע, משוואת פונקציה, גרפים, פרבולות...", R.drawable.ic_functions, new Topic[]{
 
